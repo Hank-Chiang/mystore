@@ -19,5 +19,6 @@ from django.contrib import admin
 urlpatterns = [
     #Regular expression for url() first parameter
     url(r'^admin/', admin.site.urls),
+    url(r'^', include('django.contrib.auth.urls')),
     url(r'', include('estore.urls')),
 ]
