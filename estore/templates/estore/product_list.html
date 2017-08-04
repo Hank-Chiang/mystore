@@ -1,5 +1,18 @@
+{% extends 'estore/base.html' %}
+
+{% block content %}
+    <ul>
+        {% for product in products %}
+            <li> {{ product }} </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+
+
+<!--
 <ul>
     {% for product in products %}
         <li> {{ product }} </li>
     {% endfor %}
 </ul>
+-->

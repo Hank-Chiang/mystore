@@ -1,5 +1,18 @@
+{% extends 'estore/base.html' %}
+{% load bootstrap3 %}
+
+{% block content %}
+    <form>
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        {% button submit='儲存' %}{% endbuttons %}
+    </form>
+{% endblock %}
+
+<!--
 <form method="POST">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">儲存</button>
 </form>
+-->
