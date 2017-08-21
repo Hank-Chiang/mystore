@@ -121,7 +121,7 @@ class DashboardOrderList(PermissionRequiredMixin, generic.ListView):
 
 class OrderList(LoginRequiredMixin, generic.ListView):
     def get_queryset(self):
-        return self.request.uscart_items_seter.order_set.all()
+        return self.request.user.order_set.all()
 
 #class OrderDetail(generic.DetailView):
 #    #model = Order
